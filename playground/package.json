@@ -9,6 +9,7 @@
     "@sitera-dev/next-devtools": "file:sitera-dev-next-devtools-1.0.0.tgz",
     "next": "^16",
     "next-devtools": "file:next-devtools-1.0.0.tgz",
+    "next-devtools-widget": "file:next-devtools-widget-1.0.0.tgz",
     "react": "^19",
     "react-dom": "^19"
   },

@@ -17,7 +17,7 @@ const SSE_LABEL: Record<SseStatus, string> = {
   idle: 'Idle',
   connecting: 'Connecting…',
   open: 'Connected',
-  closed: 'Disconnected — is app/api/next-devtools/sse/route.ts mounted? (run npx @sitera-dev/next-devtools init)',
+  closed: 'Disconnected — is app/api/next-devtools/sse/route.ts mounted? (run npx next-devtools-widget init)',
 };
 
 export function SystemTab({ system, sse }: { system: SystemInfo | null; sse: SseStatus }) {

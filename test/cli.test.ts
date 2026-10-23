@@ -34,7 +34,7 @@ describe('next-devtools init CLI', () => {
 
     const routePath = path.join(tmpDir, 'src', 'app', 'api', 'next-devtools', 'sse', 'route.ts');
     expect(fs.existsSync(routePath)).toBe(true);
-    expect(fs.readFileSync(routePath, 'utf8')).toContain("export { GET } from '@sitera-dev/next-devtools/server/route'");
+    expect(fs.readFileSync(routePath, 'utf8')).toContain("export { GET } from 'next-devtools-widget/server/route'");
 
     const instrPath = path.join(tmpDir, 'src', 'instrumentation.ts');
     expect(fs.existsSync(instrPath)).toBe(true);

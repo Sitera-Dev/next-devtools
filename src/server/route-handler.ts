@@ -2,7 +2,7 @@ import { broadcaster } from './event-broadcaster';
 import { getSystemInfo } from './system-info';
 
 // In your app: app/api/next-devtools/sse/route.ts
-//   export { GET } from '@sitera-dev/next-devtools/server/route';
+//   export { GET } from 'next-devtools-widget/server/route';
 
 export async function GET(request: Request): Promise<Response> {
   // Streams request/response bodies, so it must never be reachable in production by accident.

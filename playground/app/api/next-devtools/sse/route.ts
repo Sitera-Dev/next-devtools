@@ -1,1 +1,1 @@
-export { GET } from '@sitera-dev/next-devtools/server/route';
+export { GET } from 'next-devtools-widget/server/route';
