@@ -1,6 +1,6 @@
 'use server';
 
-import { trackServerAction } from 'next-devtools/server';
+import { trackServerAction } from '@sitera-dev/next-devtools/server';
 
 export const claim = trackServerAction('claim', async (voucherId: string) => {
   await new Promise((r) => setTimeout(r, 80));

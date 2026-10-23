@@ -1,4 +1,4 @@
-# next-devtools
+# @sitera-dev/next-devtools
 
 Zero-config in-app floating DevTools widget for Next.js 14, 15, and 16 (App Router & Pages Router). Deep runtime observability into **Network requests**, **Server Actions**, **Next.js Cache**, and **Runtime Diagnostics** with **0 bytes memory retained on server** and zero styling conflicts via Shadow DOM.
 
@@ -19,7 +19,7 @@ Zero-config in-app floating DevTools widget for Next.js 14, 15, and 16 (App Rout
 ## Installation
 
 ```bash
-npm install next-devtools
+npm install @sitera-dev/next-devtools
 ```
 
 ---
@@ -30,8 +30,8 @@ npm install next-devtools
 Install the package and run the init CLI:
 
 ```bash
-npm install next-devtools
-npx next-devtools init
+npm install @sitera-dev/next-devtools
+npx @sitera-dev/next-devtools init
 ```
 
 The CLI automatically:
@@ -43,7 +43,7 @@ The CLI automatically:
 Add `<NextDevTools />` to your root layout (`app/layout.tsx`):
 
 ```tsx
-import { NextDevTools } from 'next-devtools';
+import { NextDevTools } from '@sitera-dev/next-devtools';
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
@@ -65,14 +65,14 @@ If you prefer to configure files manually without the CLI:
 
 1. **Mount SSE Route Handler** (`app/api/next-devtools/sse/route.ts`):
    ```typescript
-   export { GET } from 'next-devtools/server/route';
+   export { GET } from '@sitera-dev/next-devtools/server/route';
    ```
 
 2. **Register Server Instrumentation** (`instrumentation.ts`):
    ```typescript
    export async function register() {
      if (process.env.NEXT_RUNTIME === 'nodejs') {
-       const { registerNextDevTools } = await import('next-devtools/server');
+       const { registerNextDevTools } = await import('@sitera-dev/next-devtools/server');
        registerNextDevTools();
      }
    }
@@ -80,7 +80,7 @@ If you prefer to configure files manually without the CLI:
 
 3. **Mount Component** (`app/layout.tsx`):
    ```tsx
-   import { NextDevTools } from 'next-devtools';
+   import { NextDevTools } from '@sitera-dev/next-devtools';
    // inside RootLayout:
    {process.env.NODE_ENV === 'development' && <NextDevTools />}
    ```
@@ -94,7 +94,7 @@ You can track Server Actions and any nested API `fetch()` calls they perform by 
 ```typescript
 'use server';
 
-import { trackServerAction } from 'next-devtools/server';
+import { trackServerAction } from '@sitera-dev/next-devtools/server';
 
 export const checkout = trackServerAction(
   'checkout',

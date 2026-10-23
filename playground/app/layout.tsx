@@ -1,4 +1,4 @@
-import { NextDevTools } from 'next-devtools';
+import { NextDevTools } from '@sitera-dev/next-devtools';
 import './globals.css';
 
 export const metadata = { title: 'next-devtools playground' };

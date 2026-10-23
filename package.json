@@ -1,8 +1,11 @@
 {
-  "name": "next-devtools",
+  "name": "@sitera-dev/next-devtools",
   "version": "1.0.0",
   "description": "Zero-config in-app floating DevTools for Next.js: Network, Server Actions, Cache and System inspector.",
   "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/Sitera-Dev/next-devtools.git"
